@@ -73,6 +73,7 @@
     "axios-mock-adapter": "^1.21.2",
     "eslint-config-javapepper": "^9.0.1",
     "faker": "^5.5.3",
+    "sass": "^1.59.2",
     "typescript": "^4.8.4"
   }
 }

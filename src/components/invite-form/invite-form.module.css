@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ОБЕРТКА ФОРМЫ, ЗАТЕМНЯЕТ ЗАДНИЙ ФОН? */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* ОБЕРТКА ЭЛЕМЕНТОВ ФОРМЫ */
+.inviteForm {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 415px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 74px;
+  font-family: Inter;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.Header {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+}
+
+/* ВВОД ЕМЕЙЛА */
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.input {
+  height: 102px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+/* ВЫБОР РОЛИ */
+.rolesWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 45px;
+  gap: 10px;
+}
+
+.rolesSelector {
+  height: 37px;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 42px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  appearance: none;
+  overflow: hidden;
+  background: url("../../assets/img/select-arrow.svg") no-repeat right;
+}
+
+/* НИЖНЯЯ КНОПКА "ОТПРАВИТЬ" */
+
+.sentButton {
+  background: #d0d0d0;
+  border-radius: 10px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  border: none;
+}
+
+
+.closeButton{
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/img/close-form-img.svg") no-repeat center;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  border: none;
+  cursor: pointer;
+}

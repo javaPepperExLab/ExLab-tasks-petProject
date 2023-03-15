@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './SuccessfulRegistration.module.css';
+import styles from './successfull-registration.module.css';
 
-function SuccessfulRegistration (){
+function SuccessfulRegistration() {
 
   return(
     <>

@@ -2,7 +2,7 @@ import React, { FormEvent, useState } from 'react';
 import { rolesValues } from '../../const';
 import { useAppDispatch } from '../../hooks';
 import { postUserDataAction } from '../../store/api-action';
-import { EmailData } from '../../types/emaildata';
+import { EmailData } from '../../types/invite-form';
 import styles from './invite-form.module.css';
 
 function InviteForm() {

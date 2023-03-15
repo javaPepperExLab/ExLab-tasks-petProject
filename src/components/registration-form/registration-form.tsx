@@ -1,17 +1,13 @@
-import React from 'react';
-import styles from './RegistrationForm.module.css';
+import styles from './registration-form.module.css';
 import logoSvg from '../../assets/img/logo.svg';
 import FormForFill from '../../components/registration-form/form-for-fill/form-for-fill';
 import SuccessfulRegistration from '../../components/registration-form/successfull-registration/successfull-registration';
-import { useState } from 'react';
+import { useAppSelector } from '../../hooks';
 
-function RegistrationForm(props) {
-  const [registrationStatus, setRegistrationStatus] = useState(false);
+function RegistrationForm() {
 
-  const changeRegistrationStatus = (e) => {
-    e.preventDefault();
-    setRegistrationStatus(true);
-  };
+  const registrationStatus = useAppSelector((state) => state.registrationStatus);
+
   return (
     <div className={styles.RegistrationForm}>
       <div className={styles.formWrapper}>
@@ -19,7 +15,9 @@ function RegistrationForm(props) {
           <img alt="logo" src={logoSvg} className={styles.logo} />
         </div>
         <div className={styles.formArea}>
-          {registrationStatus ? <SuccessfulRegistration /> : <FormForFill changeRegistrationStatus={changeRegistrationStatus}/>}
+          {registrationStatus ?
+            <SuccessfulRegistration /> :
+            <FormForFill />}
         </div>
       </div>
     </div>
@@ -27,3 +25,4 @@ function RegistrationForm(props) {
 }
 
 export default RegistrationForm;
+

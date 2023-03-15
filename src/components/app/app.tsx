@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../../pages/home/home';
 import Header from '../../components/header/header';
 import '../../scss/app.scss';
-// import RegistrationForm from './components/RegistrationForm/RegistrationForm';
+import RegistrationForm from '../../components/registration-form/registration-form';
 // import LoginForm from './components/LoginForm/LoginForm';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
-      {/* <RegistrationForm /> */}
+      <RegistrationForm />
       {/* <LoginForm />  */}
     </div>
   );

@@ -1,4 +1,4 @@
-.LoginForm {
+.loginForm {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
@@ -7,10 +7,10 @@
   left: 0;
 }
 
-.backgroundLogo{
+.backgroundLogo {
   position: absolute;
-  left: 40px;
-  top: 40px;
+  left: 24px;
+  top: 24px;
   height: 34px;
   width: 185px;
   display: flex;
@@ -19,15 +19,9 @@
   gap: 9px;
 }
 
-.colorfulLogo{
-  width: 34px;
-  height: 34px;
-}
-
-.textLogo{
-  margin-top: 4px;
-  width: 128px;
-  height: 30px;
+.logoMedium{
+  width: 215px;
+  height: 43px;
 }
 
 .formWrapper {
@@ -39,7 +33,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 40px 42px 64px 42px;
+  padding: 80px 42px 64px 42px;
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -48,8 +42,8 @@
 /* ЛЕВАЯ ЧАСТЬ */
 
 .logoWrapper {
-  width: 50%;
-  height: 100%;
+  width: 505px;
+  height: 333px;
   background: url("../../assets/form-images/login-img.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -124,12 +118,33 @@
   color: #1c1c1c;
 }
 
+.forgotLink {
+  /* font-family: 'Onest'; */
+  padding-left: 200px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #070C24;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
 .textInput {
   padding: 12px 16px;
   border: 1px solid #aab7c6;
   border-radius: 8px;
 }
 
+.passwordNotice {
+  /* font-family: 'Onest'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
 
 .button {
   padding: 16px 56px;

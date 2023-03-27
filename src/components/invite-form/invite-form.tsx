@@ -1,8 +1,8 @@
-import React, { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { rolesValues } from '../../const';
 import { useAppDispatch } from '../../hooks';
 import { postUserDataAction } from '../../store/api-action';
-import { EmailData } from '../../types/invite-form';
+import { EmailData } from '../../types/invite-form-data';
 import styles from './invite-form.module.css';
 
 function InviteForm() {

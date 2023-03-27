@@ -1,8 +1,10 @@
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
-import { EmailData } from '../types/invite-form';
-import { RecoveryFormData } from '../types/recovery-form';
-import { RegistrationFormData } from '../types/registration-form';
-import { setDataError, setRecoveryData, setRegistrationData, setRegistrationStatus, setUserData } from './actions';
+import { ChangePasswordData } from '../types/change-pass-data';
+import { EmailData } from '../types/invite-form-data';
+import { LoginFormData } from '../types/login-form-data';
+import { RecoveryFormData } from '../types/recovery-form-data';
+import { RegistrationFormData } from '../types/registration-form-data';
+import { changePassword, setDataError, setLoginData, setRecoveryData, setRegistrationData, setRegistrationStatus, setUserData } from './actions';
 
 type initialStateType = {
   emailData: EmailData;
@@ -10,6 +12,8 @@ type initialStateType = {
   recoveryEmail: RecoveryFormData;
   registrationStatus: boolean;
   registrationFormData: RegistrationFormData;
+  loginFormData: LoginFormData;
+  changePasswordData: ChangePasswordData;
 }
 
 const initialState: initialStateType = {
@@ -26,6 +30,13 @@ const initialState: initialStateType = {
     password: ''
   },
   registrationStatus: false,
+  loginFormData: {
+    email: '',
+    password: ''
+  },
+  changePasswordData: {
+    password: ''
+  },
 };
 
 export const reducer = createReducer(initialState, (builder) => {
@@ -44,6 +55,12 @@ export const reducer = createReducer(initialState, (builder) => {
     })
     .addCase(setRegistrationData, (state, action: PayloadAction<RegistrationFormData>) => {
       state.registrationFormData = action.payload;
+    })
+    .addCase(setLoginData, (state, action: PayloadAction<LoginFormData>) => {
+      state.loginFormData = action.payload;
+    })
+    .addCase(changePassword, (state, action: PayloadAction<ChangePasswordData>) => {
+      state.changePasswordData = action.payload;
     });
 });
 

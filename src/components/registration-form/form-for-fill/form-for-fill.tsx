@@ -1,12 +1,12 @@
-import React, { FormEvent } from 'react';
+import { FormEvent } from 'react';
 import passwordIconShow from '../../../assets/form-images/show-password.svg';
 import passwordIconHide from '../../../assets/form-images/hide-password.svg';
 import styles from './form-for-fill.module.css';
 import { useState } from 'react';
 import { PasswordVisability } from '../../../const';
-import { RegistrationFormData } from '../../../types/registration-form';
+import { RegistrationFormData } from '../../../types/registration-form-data';
 import { useAppDispatch } from '../../../hooks';
-import { postRegistrationData } from '../../../store/api-action';
+import { postRegistrationDataAction } from '../../../store/api-action';
 import { setRegistrationStatus } from '../../../store/actions';
 
 function FormForFill() {
@@ -24,20 +24,20 @@ function FormForFill() {
       setAdditionalPasswordVisibility(!additionalPasswordVisibility);
   };
 
-  const onSubmitHandle = (evt: FormEvent) => {
+  const onSubmitHandler = (evt: FormEvent) => {
     evt.preventDefault();
     const formData: RegistrationFormData = {
       name: nameValue,
       password: passwordValue,
     };
-    dispatch(postRegistrationData(formData));
+    dispatch(postRegistrationDataAction(formData));
     dispatch(setRegistrationStatus(true));
   };
 
   return(
     <>
       <h1 className={styles.header}>Регистрация</h1>
-      <form className={styles.form} onSubmit={onSubmitHandle}>
+      <form className={styles.form} onSubmit={onSubmitHandler}>
         <div className={styles.textInputWrapper}>
           <label form="inputName" className={styles.inputLabel}>
                 Имя

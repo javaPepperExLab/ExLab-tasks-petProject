@@ -1,6 +1,5 @@
 /* eslint-disable no-nested-ternary */
 import styles from './change-password.module.css';
-import closeIcon from '../../assets/form-images/close-icon.svg';
 import passwordIconShow from '../../assets/form-images/show-password.svg';
 import passwordIconHide from '../../assets/form-images/hide-password.svg';
 import { FormEvent, useState } from 'react';
@@ -117,13 +116,13 @@ function ChangePassword() {
             Продолжить
                     </button>
                   </form>
-                  <img alt="closeButton"
-                    src={closeIcon}
+                  <button
                     className={styles.close}
                     onClick={() => {
                       setClosed(!isClosed);
                     }}
-                  />
+                  >
+                  </button>
                 </div>
               </div> :
               null

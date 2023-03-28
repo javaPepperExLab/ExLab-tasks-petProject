@@ -159,10 +159,13 @@
   color: #FFFFFF;
 }
 
-.closeIcon{
+.closeIcon {
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/img/close-form-img.svg") no-repeat center;
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 24px;
-  right: 24px;
+  right: 25px;
+  top: 25px;
+  border: none;
+  cursor: pointer;
 }

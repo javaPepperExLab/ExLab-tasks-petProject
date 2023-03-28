@@ -52,6 +52,19 @@ function FormForFill() {
           />
         </div>
         <div className={styles.textInputWrapper}>
+          <label form="inputName" className={styles.inputLabel}>
+                Фамилия
+          </label>
+          <input type="text"
+            id="inputName"
+            className={styles.textInput}
+            onChange={(evt) => {
+              const { value } = evt.currentTarget;
+              setNameValue(value);
+            }}
+          />
+        </div>
+        <div className={styles.textInputWrapper}>
           <label htmlFor="inputPassword" className={styles.inputLabel}>
                 Пароль
           </label>
@@ -72,6 +85,7 @@ function FormForFill() {
               onClick={(e) => setPasswordVisability(PasswordVisability.first)}
             />
           </div>
+          <p className={styles.textContent}>Не менее 8 символов и должен содержать одну заглавную букву</p>
         </div>
         <div className={styles.textInputWrapper}>
           <label htmlFor="repeatInputPassword" className={styles.inputLabel}>
@@ -97,7 +111,6 @@ function FormForFill() {
                 Я даю согласие на обработку персональных данных
           </label>
         </div>
-
         <button className={styles.button}>Зарегистрироваться</button>
       </form>
     </>

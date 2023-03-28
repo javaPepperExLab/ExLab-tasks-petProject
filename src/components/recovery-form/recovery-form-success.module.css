@@ -1,4 +1,4 @@
-.layoutBackground {
+.formBackground {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -9,9 +9,10 @@
   align-items: center;
   justify-content: center;
 }
-.wrapper {
+
+.formWrapper {
   width: 454px;
-  height: 551px;
+  height: 555px;
   background: #ffffff;
   box-shadow: 0px 4px 161px rgba(47, 82, 224, 0.1);
   border-radius: 8px;
@@ -19,12 +20,13 @@
 }
 
 .illustrator {
-  height: 340px;
-  width: 358px;
-  margin: 56px 48px;
-  margin-bottom: 24px;
+  height: 235px;
+  width: 252px;
+  margin-top: 98.5px;
+  margin-left: 101px;
+  margin-right: 101px;
   border-radius: 0px;
-  background: url('../../assets/img/img-success-changePass.svg');
+  background: url('../../assets/img/img-success-recovPass.svg');
 }
 
 .header {
@@ -36,11 +38,14 @@
   line-height: 31px;
   text-align: center;
   color: #070C24;
+  margin-top: 24px;
 }
 
 .textContent {
   /* font-family: Onest; */
   padding-top: 24px;
+  margin-left: 49px;
+  margin-right: 49px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -49,10 +54,12 @@
 }
 
 .close {
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/img/close-form-img.svg") no-repeat center;
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 28px;
-  right: 28px;
+  right: 25px;
+  top: 25px;
+  border: none;
+  cursor: pointer;
 }
-
